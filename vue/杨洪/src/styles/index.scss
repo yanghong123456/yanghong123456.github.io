@@ -1,0 +1,59 @@
+
+
+
+
+@import "animate.css";
+@import "common";
+@import "vant-ui.css";
+@import "fonts/iconfont.css";
+
+$base_color : yellowgreen;
+$base_ft :40px;
+
+html,body,#app , .main-box {
+    width:100vw;
+    height:100vh;
+}
+
+.box{
+    font-size: $base_ft;
+    color:$base_color;
+}
+
+@keyframes lefe-in{
+    0%{transform: translateX(-100%);opacity: 0;}
+    100%{transform: translateX(0);opacity: 1;}
+
+}
+
+@keyframes rigth-out{
+    0%{transform: translateX(0);opacity: 1;}
+    100%{transform: translateX(100%);opacity: 0;}
+
+}
+
+@keyframes lefe-out{
+    0%{transform: translateX(0);opacity: 1;}
+    100%{transform: translateX(-100%);opacity: 0;}
+}
+
+@keyframes rigth-in{
+    0%{transform: translateX(100%);opacity: 0;}
+    100%{transform: translateX(0);opacity: 1;}
+}
+
+.slide-detail-enter-active{
+        animation: rigth-in .8s
+}
+
+.slide-detail-leave-active{
+    animation: lefe-out .1s
+}
+
+.slide-list-enter-active{
+    animation: left-in .1s
+}
+
+.slide-list-leave-active{
+animation: rigth-out .8s
+}
